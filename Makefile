@@ -1,3 +1,3 @@
 hello:
-	echo "hello world"
+	awk -f awk.awk data.csv
 
