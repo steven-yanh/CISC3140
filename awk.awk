@@ -1,9 +1,14 @@
 BEGIN{
-	FS="," OFS="\t"
+	FS=",";
+	OFS="\t"
 
 }
-for(i = 8;i < NF;i++)
 {
-	total += a[i];
-	print '$4'
+
+     for(i = 8;i < NF;i++)
+     {
+	 print i
+	 total += a[i]
+	 print $4
+     }
 }
