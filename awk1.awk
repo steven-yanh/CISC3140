@@ -4,10 +4,10 @@ BEGIN{
 }
 {
 	
-	print ranking $7 $4 $5 $6
+	print ranking, $7, $4, $5, $6
 	ranking ++
 }
 END{
-	$0 = $0
+
 }
 
