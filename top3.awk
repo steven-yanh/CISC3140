@@ -1,5 +1,6 @@
 BEGIN{
 	FS=OFS=","
+	NR!=1
 	Infiniti=0
 	Jeep=0
 	Audi=0
@@ -21,7 +22,11 @@ BEGIN{
 	Civic=0
 	Bmw=0
 }
-{
-	/Infiniti/ { cnt++; if(cnt <=3) print $1,$2,$3,$4 }	
 
+	/^$4 ~ Infiniti/ {next} { cnt++ 
+		if(cnt <=3){
+			print $1,$2,$3,$4,$5
+		}
+	}
+	{
 }
